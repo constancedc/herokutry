@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FeelDo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- mobile first -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/custom.css">
+</head>
+<body>
+
+<div class="row">
+  <h1>FeelDo</h1>
+  <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+</div>
+<!--What's your mood Today-->
+<div class="container mood">
+  <h4>How are u feeling today?</h4>
+  <div class="row ">
+    <btn  class="moodbtn btn" id="TodayFlemme" value="flemme" onclick="setMood(id)" style="font-size: 40px;" > 😩</btn>
+    <btn class="moodbtn btn" id="TodayGood"   value="good" onclick="setMood(id)" style="font-size: 40px;"> 🙂 </btn>
+    <btn  class="moodbtn btn" id="TodayGreat"   onclick="setMood(id)" style="font-size: 40px;" value="great"> 🤪</btn>
+  </div>
+</div>
+
+<!--Log in 'to-do' tasks-->
+<div class="container todo ">
+  <h4>Add Task:</h4>
+    <form autocomplete="off">
+      <div class="row">
+          <div class="form-group col">
+          <label for="taskName">✍🏽 Task: </label>
+            <input type="text" class="form-control" id="taskName" placeholder="" tabIndex="1" >
+          </div>
+          <div class="form-group col">
+            <label for="taskLabel">🍉 Label: </label>
+            <input type="text" list="categories" class="form-control" id="taskLabel"  placeholder="" tabIndex="2" onchange="autofill()">
+            <datalist id="categories">
+              <option>Lecture</option>
+              <option>Problem Sheet</option>
+              <option>Revision</option>
+              <option>Chores</option>
+            </datalist>
+          </div>
+          <div class="form-group col">
+            <label for="taskLabel">⌚️ Duration: </label>
+            <input type="datetime" class="form-control" id="taskDuration"  placeholder="" tabIndex="3">
+          </div>
+          <div class="form-group col">
+            <label for="taskLabel">⏰ Deadline: </label>
+            <input type="date" class="form-control" id="taskDeadline"  placeholder="" tabIndex="4">
+          </div>
+          <div class="form-group col">
+            <label for="taskMood">Mood: </label>
+            <div class="form-row">
+            <div class="form-check form-check-inline" id="taskMood" >
+              <input type="radio" class="form-check-input" id="flemme" name="taskMood" placeholder="" value="😩">
+              <label for="taskMood" class="form-check-label"> 😩 </label>
+            </div>
+            <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" id="neutral"  name="taskMood" placeholder="" value="🙂" tabIndex="5">
+            <label for="taskMood" class="form-check-label"> 🙂 </label>
+          </div>
+            <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" id="good" name="taskMood" placeholder="" value="😁" >
+            <label for="taskMood" class="form-check-label"> 😁 </label>
+          </div>
+            <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" id="exciting" name="taskMood" placeholder="" value="🥳">
+            <label for="taskMood" class="form-check-label"> 🥳</label>
+          </div>
+          </div>
+        </div>
+      </div>
+        <div class="row">
+        <btn type="submit" class="btn btn-secondary" id="taskAdd" tabindex="final"> + </btn>
+      
+      </div>
+      <div class="col container row todo-list">
+      </div>
+
+</div>
+<!--Log in 'to-do' tasks-->
+<div id="wrapper" class="container week">
+  <table id="week-calendar">
+    <tr class="days">
+      <th scope="col" class="Monday">Monday</th>
+      <th scope="col" class="Tuesday">Tuesday</th>
+      <th scope="col" class="Wednesday">Wednesday</th>
+      <th scope="col" class="Thursday">Thursday</th>
+      <th scope="col" class="Friday">Friday</th>
+      <th scope="col" class="Saturday">Saturday</th>
+      <th scope="col" class="Sunday">Sunday</th>
+  
+    </tr>
+  </table>
+  
+</div>
+
+    
+
+    <!--List 'to-do' tasks-->
+    
+</body>
+</div>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    </html>

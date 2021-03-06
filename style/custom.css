@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "DMSans";
+    font-style: normal;
+
+    src: url("/style/DM_Sans/DMSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "DMSans Medium";
+    font-style: normal;
+    src: url("/style/DM_Sans/DMSans-Medium.ttf");
+}
+
+@font-face {
+    font-family: "DMSans Bold";
+    font-style: bold;
+    src: url("/style/DM_Sans/DMSans-Bold.ttf");
+}
+
+*
+{
+    font-family:"DMSans";
+    padding: 0; margin: 0;
+    list-style: none;
+
+    
+
+}
+
+h4{
+    font-family:"DMSans Bold"
+}
+body {
+    width:100%;
+    min-width:500px;
+    height:auto;
+
+}
+
+.container{
+    display:block;
+    min-width: fit-content;
+    padding:10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width:fit-content;
+}
+
+#wrapper{
+    display: flex;
+    padding:20px;
+}
+
+.clock{
+    padding:20px;
+    left:80%;
+    position:absolute;
+}
+
+
+.todo{
+    padding:10px;
+    background-image: url("/bg.jpg");
+    border-radius: 15px;
+    justify-content: center;
+    
+}
+
+.week{
+    border-radius: 15px;
+    justify-content: center;
+    background-image:url("/background.jpg")
+}
+
+#week-calendar tr, #week-calendar th, #week-calendar td{
+    padding:20px;
+    margin:10px;
+    
+    
+}
+#week-calendar{
+    background-color: white;
+    border-radius:10px;
+}
+.row{
+    background-color: white;
+    border-radius:10px;
+    padding:10px;
+    margin:10px;
+    
+}
+
+
+.form-row{
+    width:fit-content;
+}
+
+.centered-vertically{
+    display: block;    
+} 
+
+td{
+    padding:10px;
+}
